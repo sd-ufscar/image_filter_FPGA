@@ -1,0 +1,17 @@
+name: Verificar arquivos do projeto esquematico
+on:
+  push:
+    paths:
+      - 'projeto/**'
+      - 'scripts/validar_projeto.py'
+      - '.github/workflows/validar-arquivos.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar estrutura, configuracao e ROM
+        run: python3 scripts/validar_projeto.py
