@@ -66,9 +66,3 @@ Cada ROM lê uma linha distinta da mesma matriz binária. Dois flip-flops adicio
 3. Inspecionar as atribuições de pinos em [`DE1_Filtro.qsf`](projeto/DE1_Filtro.qsf).
 4. Executar **Processing → Start Compilation**. Somente após uma compilação bem-sucedida, gerar/gravar o `.sof` no Programmer.
 5. Utilizar as chaves conforme a tabela de modos. Ver [instruções completas](docs/08-reproducao.md).
-
-## Preservação e limitações
-
-O [arquivo ZIP original](Projeto_DE1_Somente_Esquematico.zip) foi preservado, assim como o [inventário da extração](INVENTARIO_EXTRACAO.md) e o [`LEIA-ME.txt`](projeto/LEIA-ME.txt). O projeto original **não contém diagramas de ondas nem comprovação de compilação no Quartus** nesta versão; a documentação distingue resultados estruturais de validação física. A [verificação automática de consistência](scripts/validar_projeto.py) inspeciona arquivos e parâmetros, sem sintetizar o circuito.
-
-Disciplina de Sistemas Digitais — UFSCar, Turma C, 2026. Prof. Dr. Emerson Carlos Pedrino. Filipe Gonçalves dos Santos Dameto; Enrique Abrahão Mantovani; Bruno Henrique Julião; João Carlos Amaro da Silva Neto.
