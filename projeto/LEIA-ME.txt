@@ -1,0 +1,31 @@
+CORRECAO DO ERRO INTERNO DE COMPILACAO: GIO_PIN::get_default_value
+Quartus II 13.0 SP1 — Placa DE1 EP2C20F484C7
+
+A versao anterior do projeto tinha pinos de entrada sem a declaracao de
+valor padrao (VCC/GND), requerida pelo leitor de esquematicos do Quartus.
+
+O pacote atual acrescenta a anotacao (text "VCC" ...) nos pinos de entrada
+de ambos os esquematicos, sem usar qualquer linguagem de descricao hardware.
+
+Arquivos corrigidos:
+- DE1_Filtro.bdf: 5 pinos de entrada corrigidos
+- Filtro3x3_Referencia.bdf: 9 pinos de entrada corrigidos
+
+PROCEDIMENTO:
+1. Feche o Quartus II.
+2. Extraia todo este ZIP em uma pasta NOVA, p.ex. C:\DE1_Filtro_Correcao_Compilacao
+3. Abra DE1_Filtro.qpf pelo File > Open Project.
+4. Confira em Assignments > Settings > General: Top-Level Entity = DE1_Filtro.
+5. Abra DE1_Filtro.bdf pelo File > Open.
+6. Use Processing > Start > Start Analysis & Synthesis.
+7. Se nao houver erros, use Processing > Start Compilation.
+
+NOTA: nao ha uma instalacao local do Quartus II para testar a compilacao.
+Esta revisao corrige especificamente a causa textual encontrada para o
+assert 'm_default_value_text != NULL'. Se surgir outra mensagem, envie o
+primeiro erro listado no painel Messages / Processing, e nao apenas o resumo.
+
+NOVA REVISAO: corrigidas 13 sobreposicoes de sinais em fios individuais.
+Os segmentos de ligacao eram longos demais e atravessavam terminais de
+outros blocos. Foram encurtados preservando-se as etiquetas das redes.
+O Quartus precisa validar o projeto; nao ha compilacao Quartus real disponivel.
