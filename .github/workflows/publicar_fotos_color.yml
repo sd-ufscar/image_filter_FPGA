@@ -1,0 +1,39 @@
+name: Publicar fotos originais do diagrama (unica execucao)
+on:
+  push:
+    paths:
+      - '.github/assets/diagramas_originais.zip'
+      - '.github/workflows/publicar_fotos_color.yml'
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extrair originais coloridos sem modificar fontes
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          archive=Path('.github/assets/diagramas_originais.zip')
+          with zipfile.ZipFile(archive) as z:
+              entries=z.infolist()
+              if len(entries)!=12: raise ValueError('Expected 12 source images')
+              for entry in entries:
+                  path=Path(entry.filename)
+                  if path.is_absolute() or '..' in path.parts or path.parts[0]!='fotos_do_diagrama' or path.suffix.lower()!='.jpeg':
+                      raise ValueError('Invalid path: '+str(path))
+                  if entry.file_size>5_000_000: raise ValueError('Image unexpectedly large')
+                  path.parent.mkdir(parents=True,exist_ok=True)
+                  path.write_bytes(z.read(entry))
+          print('Published 12 original JPEG files in fotos_do_diagrama/')
+          PY
+      - name: Commit only the photos in this repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fotos_do_diagrama/*.jpeg
+          git diff --cached --quiet || (git commit -m 'docs: publish 12 original color schematic photos' && git push origin HEAD:main)
