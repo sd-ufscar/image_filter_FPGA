@@ -18,6 +18,16 @@ Há três instâncias de `LPM_ROM` de largura 1, cada uma com endereço de 15 bi
 
 Os cálculos usam `LPM_CONSTANT` e `LPM_ADD_SUB`, configurados para subtração sem sinal. O endereço pode ser descrito como `(linha << 8) | coluna`, pois as duas partes ocupam sete e oito bits, respectivamente.
 
+## Registros do esquemático
+
+**Ajuste e composição dos endereços:**
+
+![Operadores ADD SUB da formação do endereço](../fotos_do_diagrama/add_subs.jpeg)
+
+**Três instâncias da memória ROM:**
+
+![Instâncias de memória ROM](../fotos_do_diagrama/ROMs.jpeg)
+
 ## Portas de validade
 
 Os sinais `VALID_Y_TOP`, `VALID_Y_MID` e `VALID_Y_BOT` controlam a validade dos pixels em suas faixas verticais. `READ_H_VALID` determina a faixa horizontal de leitura (142 a 397), e um flip-flop produz `READ_H_DELAYED` para acompanhar a latência da ROM.

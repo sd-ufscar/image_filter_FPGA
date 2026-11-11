@@ -59,6 +59,14 @@ Cada ROM lê uma linha distinta da mesma matriz binária. Dois flip-flops adicio
 | [08 — Reprodução no Quartus](docs/08-reproducao.md) | Abertura, configurações, compilação e placa |
 | [09 — Verificações e limites](docs/09-validacao.md) | Resultados verificáveis e limites dos testes |
 
+## Fotografias do esquemático
+
+As **12 fotografias originais** do circuito foram organizadas na [galeria de diagramas](fotos_do_diagrama/README.md). As imagens ajudam a acompanhar os elementos apresentados nos capítulos técnicos.
+
+<img src="fotos_do_diagrama/Filtro3x3.jpeg" alt="Vizinhança binária 3 por 3" width="620">
+
+<img src="fotos_do_diagrama/ROMs.jpeg" alt="Memórias ROM da imagem" width="440">
+
 ## Reproduzir
 
 1. Baixar/clonar este repositório; manter juntos `DE1_Filtro.qpf`, os dois `.bdf`, o `.qsf` e o `.mif`.

@@ -11,6 +11,10 @@ Cada leitura da ROM produz um pixel à direita da janela (`*_R`). Dois flip-flop
 
 Um dos pixels centrais, `PIX_MID_C`, representa a seleção sem filtragem; os outros oito constituem sua vizinhança.
 
+## Registradores da janela
+
+![Flip-flops que deslocam as amostras de pixels](../fotos_do_diagrama/FFs.jpeg)
+
 ## Registro temporal
 
 A cadeia da linha superior segue `PIX_TOP_R → DFF → PIX_TOP_C → DFF → PIX_TOP_L`. As linhas média e inferior seguem o mesmo padrão. O acesso simultâneo às três ROMs permite obter linhas diferentes do mesmo arquivo de imagem.

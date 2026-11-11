@@ -18,6 +18,16 @@ Os contadores `LPM_COUNTER` de 10 bits possuem módulo **800** para `H` e **525*
 
 O quadro completo contém 800 × 525 contagens. A taxa nominal de atualização é **25 MHz / (800 × 525) ≈ 59,52 Hz**. Apenas uma região de 256 × 128 é utilizada para a imagem; o restante depende do valor de saída mascarado.
 
+## Registros do esquemático
+
+**Contadores horizontal e vertical:**
+
+![Contadores da varredura VGA](../fotos_do_diagrama/Contadores.jpeg)
+
+**Comparadores de sincronismo e região visível:**
+
+![Comparadores de contagem da varredura](../fotos_do_diagrama/Comparadores.jpeg)
+
 ## Reset
 
 `KEY[0]` é ativo em zero. Um inversor gera `RESET` para o `aclr` dos contadores; o botão também é ligado à limpeza assíncrona dos flip-flops e dos atrasos.

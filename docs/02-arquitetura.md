@@ -31,6 +31,10 @@ flowchart TB
 | `GRADIENT` | `MAX9 AND (NOT MIN9)` |
 | `FILTER`, `PROC`, `SELECTED`, `PIXEL` | Cascata de seleção e máscara da imagem |
 
+### Registro das entradas físicas
+
+![Entradas e sinais de controle da FPGA](../fotos_do_diagrama/Entrada_VCC.jpeg)
+
 ## Fluxo de dados
 
 Os bits originais são obtidos a partir de ROMs sincronizadas com `CLK25`. A combinação sequencial/combinacional forma a vizinhança, e o circuito seleciona a saída. O bit `PIXEL` dirige os canais do conversor RGB da porta VGA.

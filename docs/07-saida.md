@@ -8,6 +8,10 @@ Portanto, quando `PIXEL=1`, os três canais recebem o valor binário `1111` (bra
 
 Os limites de comparador definem uma região horizontal de **H=144..399** e vertical de **V=35..162**, totalizando 256 × 128 pixels. Fora dela, `IMG_MASK=0` faz `PIXEL=0`.
 
+## Registro das saídas
+
+![Conexões dos sinais RGB e sincronismos VGA](../fotos_do_diagrama/Saidas.jpeg)
+
 ## Pinos do projeto
 
 | Sinal | Pino |

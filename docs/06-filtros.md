@@ -16,6 +16,16 @@ A **erosão** vale 1 somente quando **todos** os nove pixels valem 1. O circuito
 
 A porta NOT produz `NOT_MIN` e uma AND gera **`GRADIENT = MAX9 AND NOT_MIN`**, isto é, `D AND (NOT E)`. Em uma imagem binária, esse cálculo destaca vizinhanças que têm tanto pixels 0 quanto pixels 1; é uma forma lógica do gradiente morfológico.
 
+## Esquemáticos da filtragem
+
+**Circuito de referência com nove entradas:**
+
+![Filtro 3 por 3 com portas OR e AND](../fotos_do_diagrama/Filtro3x3.jpeg)
+
+**Portas AND de validação e seleção:**
+
+![Portas AND da filtragem](../fotos_do_diagrama/ANDs.jpeg)
+
 ## Exatamente como as chaves selecionam
 
 O circuito forma as expressões:
