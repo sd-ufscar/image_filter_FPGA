@@ -21,9 +21,9 @@ Recomenda-se usar o ambiente original indicado no pacote: **Quartus II 13.0 SP1*
 
 O pacote contém uma explicação de ajustes já realizados nos pinos do editor esquemático e em conexões que se sobrepunham. Esse registro **não é prova de compilação**; indica que os arquivos foram preparados para nova verificação no Quartus.
 
-## Sem simulações anexadas
+## Registros disponíveis
 
-O pacote não inclui formas de onda, arquivo `.sof` de uma compilação validada nem fotografias de saída VGA. Os resultados documentados são os parâmetros e as conexões extraídos dos arquivos do projeto. Não afirmar que a gravação foi realizada com sucesso sem testar no ambiente de laboratório.
+As [fotografias da saída VGA](../resultados_vga/README.md) documentam os efeitos visuais observados no monitor. Os arquivos disponibilizados não incluem diagramas de ondas nem relatórios completos de uma compilação comprovadamente bem-sucedida. Os resultados fotografados não substituem a verificação dos detalhes temporais no Quartus.
 
 ---
 [Anterior](07-saida.md) · [Índice](../README.md#repositório-e-tutorial) · [Próximo: validação](09-validacao.md)

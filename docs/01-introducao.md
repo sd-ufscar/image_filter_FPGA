@@ -10,7 +10,7 @@ Uma imagem binária associa um bit a cada posição `(x,y)`: zero ou um. A morfo
 
 O projeto usa a mesma matriz de 256 × 128 posições em três instâncias de ROM, portas AND/OR para combinar os nove pixels e uma seleção de operações controlada pelas chaves.
 
-**Escopo de validação:** arquivos `.bdf`, `.qsf` e `.mif` permitem comprovar a arquitetura e os parâmetros declarados; sem a compilação no Quartus e sem fotos do monitor não é possível garantir o resultado físico.
+**Escopo de validação:** arquivos `.bdf`, `.qsf` e `.mif` permitem comprovar a arquitetura e os parâmetros declarados; as [fotografias do monitor](../resultados_vga/README.md) documentam os efeitos visuais das operações, mas não substituem a compilação no Quartus e a análise de temporização.
 
 ---
 [Índice](../README.md#repositório-e-tutorial) · [Próximo: arquitetura](02-arquitetura.md)

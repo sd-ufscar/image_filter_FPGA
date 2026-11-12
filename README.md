@@ -67,6 +67,14 @@ As **12 fotografias originais** do circuito foram organizadas na [galeria de dia
 
 <img src="fotos_do_diagrama/ROMs.jpeg" alt="Memórias ROM da imagem" width="440">
 
+## Resultados observados no monitor
+
+As fotografias da prática mostram a imagem original e os resultados visualmente compatíveis com **erosão, dilatação e gradiente morfológico**. Os registros estão na [galeria de resultados VGA](resultados_vga/README.md), junto às imagens em resolução original.
+
+[![Imagem original da prática](resultados_vga/Original.jpeg)](resultados_vga/Original.jpeg)
+
+A identificação dos modos baseia-se no efeito visível de cada operação; as fotografias não mostram as posições das chaves no momento do registro.
+
 ## Reproduzir
 
 1. Baixar/clonar este repositório; manter juntos `DE1_Filtro.qpf`, os dois `.bdf`, o `.qsf` e o `.mif`.

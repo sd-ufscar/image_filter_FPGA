@@ -12,6 +12,10 @@ Os limites de comparador definem uma região horizontal de **H=144..399** e vert
 
 ![Conexões dos sinais RGB e sincronismos VGA](../fotos_do_diagrama/Saidas.jpeg)
 
+## Saída observada no monitor
+
+As [fotografias da execução](../resultados_vga/README.md) apresentam a imagem original e as alterações visuais compatíveis com os três filtros implementados.
+
 ## Pinos do projeto
 
 | Sinal | Pino |
