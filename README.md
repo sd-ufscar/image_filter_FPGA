@@ -42,8 +42,6 @@ As combinações `101`, `110` e `111` não correspondem a entradas definidas do 
 4. Executar **Processing > Start Compilation** e consultar os avisos apresentados.
 5. Para utilizar a placa, revisar a configuração do Programmer e os pinos antes da gravação.
 
-O pacote contém um relatório de compilação **concluída com sucesso em 16/11/2026**, realizado no Quartus II 13.0 SP1. O relatório informa 186 elementos lógicos, 120 registradores, 34.800 bits de memória e uma PLL. Também registra a ausência de um arquivo `.sdc` para restrições temporais e um aviso sobre atribuição exata de pino. Por isso, o término da compilação não deve ser confundido com validação completa de temporização ou funcionamento físico na placa.
-
 ## Referência
 
 Os arquivos de projeto e os relatórios de compilação estão reunidos em `filtroimagem.7z`, que constitui a referência para esta implementação.
